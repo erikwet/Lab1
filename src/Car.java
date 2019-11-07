@@ -6,49 +6,48 @@ public abstract class Car implements Movable {
     private double currentSpeed; // The current speed of the car
     private Color color; // Color of the car
     private final String modelName; // The car model name
-    private Direction currentDirection; // Direction the car is facing
-    int x; // x position of car
-    int y; // y position of car
+    private Direction currentDirection = Direction.NORTH; // Direction the car is facing
+    double x; // x position of car
+    double y; // y position of car
 
     public Car(int nrDoors, double enginePower, Color color, String modelName) {
         this.nrDoors = nrDoors;
         this.enginePower = enginePower;
         this.color = color;
         this.modelName = modelName;
-        this.currentDirection = Direction.NORTH;
         stopEngine();
     }
 
     public void move() {
-        switch (getCurrentDirection()){
+        switch (currentDirection){
             case NORTH:
-                y += getCurrentSpeed();
+                y += currentSpeed;
                 break;
             case EAST:
-                x += getCurrentSpeed();
+                x += currentSpeed;
                 break;
             case SOUTH:
-                y -= getCurrentSpeed();
+                y -= currentSpeed;
                 break;
             case WEST:
-                x -= getCurrentSpeed();
+                x -= currentSpeed;
                 break;
         }
     }
 
     public void turnLeft() {
-        switch (getCurrentDirection()) {
+        switch (currentDirection) {
             case NORTH:
-                setCurrentDirection(Direction.WEST);
+                currentDirection = Direction.WEST;
                 break;
             case EAST:
-                setCurrentDirection(Direction.NORTH);
+                currentDirection = Direction.NORTH;
                 break;
             case SOUTH:
-                setCurrentDirection(Direction.EAST);
+                currentDirection = Direction.EAST;
                 break;
             case WEST:
-                setCurrentDirection(Direction.SOUTH);
+                currentDirection = Direction.SOUTH;
                 break;
         }
     }
@@ -56,16 +55,16 @@ public abstract class Car implements Movable {
     public void turnRight() {
         switch (getCurrentDirection()) {
             case NORTH:
-                setCurrentDirection(Direction.EAST);
+                currentDirection = Direction.EAST;
                 break;
             case EAST:
-                setCurrentDirection(Direction.SOUTH);
+                currentDirection = Direction.SOUTH;
                 break;
             case SOUTH:
-                setCurrentDirection(Direction.WEST);
+                currentDirection = Direction.WEST;
                 break;
             case WEST:
-                setCurrentDirection(Direction.NORTH);
+                currentDirection = Direction.NORTH;
                 break;
         }
     }
@@ -96,11 +95,11 @@ public abstract class Car implements Movable {
         currentSpeed = 0.1;
     }
 
-    public Direction getCurrentDirection() { return currentDirection; }
-
-    public void setCurrentDirection(Direction currentDirection) { this.currentDirection = currentDirection; }
-
     public void stopEngine(){
         currentSpeed = 0;
     }
+
+    public Direction getCurrentDirection() { return currentDirection; }
+
+    public void setCurrentDirection(Direction currentDirection) { this.currentDirection = currentDirection; }
 }
