@@ -2,13 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="56a53155-a816-4e78-a8f4-a6f56ba08ad0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/MovableTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab1/Car$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab1/Car$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Lab1/Car.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab1/Car.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab1/MovableTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab1/MovableTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Lab1/Saab95.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab1/Saab95.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Lab1/Volvo240.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab1/Volvo240.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Movable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Car.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MovableTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MovableTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Saab95.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Saab95.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Volvo240.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Volvo240.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -102,5 +105,8 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Lab1$MovableTest.ic" NAME="MovableTest Coverage Results" MODIFIED="1573219258414" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
