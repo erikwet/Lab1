@@ -1,4 +1,7 @@
 public interface Movable {
+    /**
+     * Direction for car
+     */
     enum Direction {
         NORTH, EAST, SOUTH, WEST
     }

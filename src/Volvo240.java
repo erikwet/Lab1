@@ -17,7 +17,10 @@ public class Volvo240 extends Car{
     private void decrementSpeed(double amount) { setCurrentSpeed(Math.max(getCurrentSpeed() - speedFactor() * amount, 0));}
 
     // TODO fix this method according to lab pm
-    public void gas(double amount){
+    public void gas(double amount) {
+        if(amount < 0 || amount > 1) {
+            return;
+        }
         incrementSpeed(amount);
     }
 
