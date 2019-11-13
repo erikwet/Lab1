@@ -30,7 +30,7 @@ public abstract class Car implements Movable {
     }
 
     /**
-     * Moves Car depending on the direction it's facing
+     * Moves Car depending on the direction it's facing. Inherits from Movable interface
      */
     @Override
     public void move() {
@@ -51,7 +51,7 @@ public abstract class Car implements Movable {
     }
 
     /**
-     * Turns the car to the left
+     * Turns the car to the left depending on it's current direction. Inherits from Movable interface
      */
     @Override
     public void turnLeft() {
@@ -72,7 +72,7 @@ public abstract class Car implements Movable {
     }
 
     /**
-     * Turns the car to the right
+     * Turns the car to the right depending on it's current direction. Inherits from Movable interface
      */
     @Override
     public void turnRight() {
@@ -122,8 +122,16 @@ public abstract class Car implements Movable {
         decrementSpeed(amount);
     }
 
+    /**
+     * Increments speed of car depending on amount
+     * @param amount Amount the speed should increment with
+     */
     protected void incrementSpeed(double amount){}
 
+    /**
+     * Decrements speed of car depending on amount
+     * @param amount Amount the speed should decrement with
+     */
     protected void decrementSpeed(double amount){}
 
     /**

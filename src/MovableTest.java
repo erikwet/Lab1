@@ -55,10 +55,14 @@ public class MovableTest {
     @Test
     public void testMove() {
         volvo.setCurrentDirection(Movable.Direction.NORTH);
-
         volvo.setCurrentSpeed(5);
         volvo.move();
         assertEquals(5, volvo.y, 0.001);
+
+        saab.setCurrentDirection(Movable.Direction.EAST);
+        saab.setCurrentSpeed(5);
+        saab.move();
+        assertEquals(5, saab.x, 0.001);
     }
 
     @Test
@@ -71,9 +75,18 @@ public class MovableTest {
         volvo.gas(2);
         assertEquals(0, volvo.getCurrentSpeed(), 0.0001);
 
-        volvo.setCurrentSpeed(50);
-        volvo.gas(-2);
-        assertEquals(50, volvo.getCurrentSpeed(), 0.0001);
+        saab.setCurrentSpeed(50);
+        saab.gas(1);
+        assertEquals(51.25, saab.getCurrentSpeed(), 0.0001);
+
+        saab.setCurrentSpeed(50);
+        saab.gas(-2);
+        assertEquals(50, saab.getCurrentSpeed(), 0.0001);
+
+        saab.setTurboOn();
+        saab.setCurrentSpeed(50);
+        saab.gas(1);
+        assertEquals(51.625, saab.getCurrentSpeed(), 0.0001);
     }
 
     @Test
@@ -81,5 +94,19 @@ public class MovableTest {
         volvo.setCurrentSpeed(100);
         volvo.brake(1);
         assertEquals(98.75, volvo.getCurrentSpeed(), 0.0001);
+
+        saab.setCurrentSpeed(100);
+        saab.brake(2);
+        assertEquals(100, saab.getCurrentSpeed(), 0.0001);
+
+        saab.setTurboOn();
+        saab.setCurrentSpeed(100);
+        saab.brake(1);
+        assertEquals(98.375, saab.getCurrentSpeed(), 0.0001);
+
+        saab.setTurboOff();
+        saab.setCurrentSpeed(100);
+        saab.brake(1);
+        assertEquals(98.75, saab.getCurrentSpeed(), 0.0001);
     }
 }
