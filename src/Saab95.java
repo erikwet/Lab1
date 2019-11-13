@@ -31,17 +31,13 @@ public class Saab95 extends Car {
     }
 
     /**
+     * Calculates the speed factor (overrides method from Car)
      * @return The speed factor (factor the speed is changed by)
      */
-    private double speedFactor(){
+    @Override
+    protected double speedFactor(){
         double turbo = 1;
         if(turboOn) turbo = 1.3;
         return getEnginePower() * 0.01 * turbo;
     }
-
-    @Override
-    protected void incrementSpeed(double amount) { setCurrentSpeed(getCurrentSpeed() + speedFactor() * amount); }
-
-    @Override
-    protected void decrementSpeed(double amount){ setCurrentSpeed(getCurrentSpeed() - speedFactor() * amount); }
 }

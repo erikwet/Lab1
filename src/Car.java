@@ -97,14 +97,8 @@ public abstract class Car implements Movable {
      * @param amount Amount the speed should be increased with
      */
     public void gas(double amount) {
-        try{
-            if(amount < 0 || amount > 1) {
-                throw new IllegalArgumentException();
-            }
-        } catch (IllegalArgumentException e) {
-            return;
-        }
-        incrementSpeed(amount);
+        amount = Math.max(amount, 0);
+        incrementSpeed(Math.min(amount, 1));
     }
 
     /**
@@ -112,29 +106,30 @@ public abstract class Car implements Movable {
      * @param amount Amount the speed should be decreased with
      */
     public void brake(double amount){
-        try{
-            if(amount < 0 || amount > 1) {
-                throw new IllegalArgumentException();
-            }
-        } catch (IllegalArgumentException e) {
-            return;
-        }
-        decrementSpeed(amount);
+        amount = Math.max(amount, 0);
+        decrementSpeed(Math.min(amount, 1));
     }
+
+    /**
+     * Returns speed factor of car
+     * @return Returns speed factor (is overridden in subclasses)
+     */
+    protected double speedFactor() { return 0; }
 
     /**
      * Increments speed of car depending on amount
      * @param amount Amount the speed should increment with
      */
-    protected void incrementSpeed(double amount){}
+    public void incrementSpeed(double amount) { setCurrentSpeed(getCurrentSpeed() + speedFactor() * amount); }
 
     /**
      * Decrements speed of car depending on amount
      * @param amount Amount the speed should decrement with
      */
-    protected void decrementSpeed(double amount){}
+    public void decrementSpeed(double amount){ setCurrentSpeed(getCurrentSpeed() - speedFactor() * amount); }
 
     /**
+     * Returns number of doors on car
      * @return number of doors on car
      */
     public int getNrDoors(){
@@ -142,6 +137,7 @@ public abstract class Car implements Movable {
     }
 
     /**
+     * Returns engine power of car
      * @return Engine power of car
      */
     public double getEnginePower(){
@@ -149,18 +145,22 @@ public abstract class Car implements Movable {
     }
 
     /**
+     * Gets current speed of car
      * @return Current speed of car
      */
-    public double getCurrentSpeed(){
-        return currentSpeed;
+    public double getCurrentSpeed() { return currentSpeed; }
+
+    /**
+     * Sets current speed of car to a valid value in the interval [0, enginePower]
+     * @param speed Sets current speed of car
+     */
+    public void setCurrentSpeed(double speed) {
+        speed = Math.min(speed, enginePower);
+        currentSpeed = Math.max(speed, 0);
     }
 
     /**
-     * @param speed Sets current speed of car
-     */
-    public void setCurrentSpeed(double speed) { currentSpeed = speed; }
-
-    /**
+     * Gets color of car
      * @return Color of car
      */
     public Color getColor(){
@@ -168,6 +168,7 @@ public abstract class Car implements Movable {
     }
 
     /**
+     * Sets color of car to valid color
      * @param clr Sets the color of car
      */
     public void setColor(Color clr){
@@ -189,11 +190,13 @@ public abstract class Car implements Movable {
     }
 
     /**
+     * Returns current direction of car
      * @return Current direction (the direction the car is currently facing)
      */
     public Direction getCurrentDirection() { return currentDirection; }
 
     /**
+     * Sets current direction of car to a valid direction
      * @param currentDirection Current direction of car to set
      */
     public void setCurrentDirection(Direction currentDirection) { this.currentDirection = currentDirection; }

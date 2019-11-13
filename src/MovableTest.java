@@ -73,15 +73,15 @@ public class MovableTest {
 
         volvo.setCurrentSpeed(0);
         volvo.gas(2);
-        assertEquals(0, volvo.getCurrentSpeed(), 0.0001);
+        assertEquals(1.25, volvo.getCurrentSpeed(), 0.0001);
 
         saab.setCurrentSpeed(50);
         saab.gas(1);
         assertEquals(51.25, saab.getCurrentSpeed(), 0.0001);
 
-        saab.setCurrentSpeed(50);
-        saab.gas(-2);
-        assertEquals(50, saab.getCurrentSpeed(), 0.0001);
+        saab.setCurrentSpeed(-50);
+        saab.gas(1);
+        assertEquals(1.25, saab.getCurrentSpeed(), 0.0001);
 
         saab.setTurboOn();
         saab.setCurrentSpeed(50);
@@ -97,7 +97,7 @@ public class MovableTest {
 
         saab.setCurrentSpeed(100);
         saab.brake(2);
-        assertEquals(100, saab.getCurrentSpeed(), 0.0001);
+        assertEquals(98.75, saab.getCurrentSpeed(), 0.0001);
 
         saab.setTurboOn();
         saab.setCurrentSpeed(100);

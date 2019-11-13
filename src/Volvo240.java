@@ -16,15 +16,11 @@ public class Volvo240 extends Car{
     }
 
     /**
+     * Calculates the speed factor (overrides method from Car)
      * @return The speed factor (factor the speed is changed by)
      */
-    private double speedFactor(){
+    @Override
+    protected double speedFactor(){
         return getEnginePower() * 0.01 * trimFactor;
     }
-
-    @Override
-    protected void incrementSpeed(double amount) { setCurrentSpeed(Math.min(getCurrentSpeed() + speedFactor() * amount, getEnginePower())); }
-
-    @Override
-    protected void decrementSpeed(double amount) { setCurrentSpeed(Math.max(getCurrentSpeed() - speedFactor() * amount, 0));}
 }

@@ -6,10 +6,12 @@
       <change beforePath="$PROJECT_DIR$/out/production/Lab1/Car.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab1/Car.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Lab1/MovableTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab1/MovableTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Lab1/Saab95.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab1/Saab95.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab1/Volvo240.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab1/Volvo240.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Car.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Movable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MovableTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MovableTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Saab95.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Saab95.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Volvo240.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Volvo240.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,7 +20,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageViewManager">
-    <option name="myElementSize" value="262" />
+    <option name="myElementSize" value="293" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -74,6 +76,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MovableTest.testGas" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Lab1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MovableTest" />
+      <option name="METHOD_NAME" value="testGas" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MovableTest.testTurnLeft" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Lab1" />
       <option name="PACKAGE_NAME" value="" />
@@ -87,6 +99,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.MovableTest" />
+        <item itemvalue="JUnit.MovableTest.testGas" />
         <item itemvalue="JUnit.MovableTest.testTurnLeft" />
       </list>
     </recent_temporary>
@@ -128,7 +141,8 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Lab1$MovableTest.ic" NAME="MovableTest Coverage Results" MODIFIED="1573220966562" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Lab1$MovableTest_testGas.ic" NAME="MovableTest.testGas Coverage Results" MODIFIED="1573656176056" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Lab1$MovableTest.ic" NAME="MovableTest Coverage Results" MODIFIED="1573657228758" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/Lab1$MovableTest_testTurnLeft.ic" NAME="MovableTest.testTurnLeft Coverage Results" MODIFIED="1573220328881" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
