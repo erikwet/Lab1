@@ -1,6 +1,8 @@
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
+import java.util.List;
+
 public class MovableTest {
 
     Volvo240 volvo = new Volvo240();
@@ -8,6 +10,7 @@ public class MovableTest {
 
     @Test
     public void testTurnLeft() {
+
         volvo.setCurrentDirection(Movable.Direction.NORTH);
         volvo.turnLeft();
         assertEquals(Movable.Direction.WEST, volvo.getCurrentDirection());
@@ -82,11 +85,6 @@ public class MovableTest {
         saab.setCurrentSpeed(-50);
         saab.gas(1);
         assertEquals(1.25, saab.getCurrentSpeed(), 0.0001);
-
-        saab.setTurboOn();
-        saab.setCurrentSpeed(50);
-        saab.gas(1);
-        assertEquals(51.625, saab.getCurrentSpeed(), 0.0001);
     }
 
     @Test

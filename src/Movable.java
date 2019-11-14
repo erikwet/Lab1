@@ -1,23 +1,23 @@
 public interface Movable {
     /**
-     * Possible directions for car
+     * Possible directions for objects
      */
     enum Direction {
         NORTH, EAST, SOUTH, WEST
     }
 
     /**
-     * Makes car move in current direction
+     * Makes object move in current direction
      */
     void move();
 
     /**
-     * Makes car turn left depending on current direction
+     * Makes object turn left depending on current direction
      */
     void turnLeft();
 
     /**
-     * Makes car turn right depending on current direction
+     * Makes object turn right depending on current direction
      */
     void turnRight();
 }
