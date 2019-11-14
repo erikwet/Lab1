@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="56a53155-a816-4e78-a8f4-a6f56ba08ad0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Test/Saab95Test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab1/MovableTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Movable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MovableTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/MovableTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/MovableTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/MovableTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab1/Car.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab1/Car.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/Lab1/MovableTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Lab1/MovableTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Car.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -61,7 +60,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.Saab95Test.TurboTest">
+  <component name="RunManager" selected="JUnit.MovableTest">
     <configuration default="true" type="Application" factoryName="Application">
       <module name="Lab1" />
       <method v="2">
@@ -109,10 +108,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.Saab95Test.TurboTest" />
         <item itemvalue="JUnit.MovableTest" />
-        <item itemvalue="JUnit.MovableTest.testGas" />
         <item itemvalue="JUnit.MovableTest.testTurnLeft" />
+        <item itemvalue="JUnit.Saab95Test.TurboTest" />
+        <item itemvalue="JUnit.MovableTest.testGas" />
       </list>
     </recent_temporary>
   </component>
