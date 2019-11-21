@@ -114,7 +114,7 @@ public abstract class Car implements Movable {
      * Returns speed factor of car
      * @return Returns speed factor (is overridden in subclasses)
      */
-    protected double speedFactor() { return 0; }
+    protected double speedFactor() { return 1; }
 
     /**
      * Increments speed of car depending on amount
